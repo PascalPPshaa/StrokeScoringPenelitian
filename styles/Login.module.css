@@ -1,0 +1,247 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 30px 30px;
+  text-align: center;
+  color: white;
+}
+
+.icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.form {
+  padding: 40px 30px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+}
+
+.input:focus {
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.passwordField {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.passwordToggle:hover {
+  opacity: 0.7;
+}
+
+.error {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  background: #fecaca;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #991b1b;
+  font-weight: 500;
+  animation: slideInDown 0.3s ease-out;
+}
+
+.button {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  background: #9333ea;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  height: 1.2em;
+  width: 1.2em;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.footer {
+  padding: 20px 30px;
+  text-align: center;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.footerTitle {
+  margin: 0;
+}
+
+.footerCopyright {
+  margin: 4px 0 0 0;
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .cardHeader {
+    padding: 30px 20px 20px;
+  }
+
+  .icon {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .form {
+    padding: 30px 20px;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .input {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+
+  .button {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .footer {
+    padding: 15px 20px;
+    font-size: 11px;
+  }
+}
